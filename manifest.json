@@ -1,0 +1,29 @@
+{
+   "manifest_version": 3,
+   "name": "LC JWT Generator",
+   "description": "Allows to generate JWT token for any environment from currently opened LC page",
+   "version": "1.0",
+   "action": {
+      "default_popup": "hello.html",
+      "default_icon": "icon-128.png"
+   },
+   "icons": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+   },
+   "permissions": [
+      "activeTab",
+      "webRequest",
+      "debugger",
+      "storage"
+   ],
+   "host_permissions": [
+      "*://*.sdl.corp/",
+      "*://*.sdl.com/*"
+   ],
+   "background": {
+      "service_worker": "service-worker.js"
+   }
+}
